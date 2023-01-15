@@ -1,0 +1,13 @@
+/Users/lorcanfeeney/Desktop/Soccer League App/sooccer-league-app/src/main/java/com/soccerapp/sooccerleagueapp/dto/TeamsDTO.java
+/Users/lorcanfeeney/Desktop/Soccer League App/sooccer-league-app/src/main/java/com/soccerapp/sooccerleagueapp/SooccerLeagueAppApplication.java
+/Users/lorcanfeeney/Desktop/Soccer League App/sooccer-league-app/src/main/java/com/soccerapp/sooccerleagueapp/dao/Teams.java
+/Users/lorcanfeeney/Desktop/Soccer League App/sooccer-league-app/src/main/java/com/soccerapp/sooccerleagueapp/util/EndPointConstants.java
+/Users/lorcanfeeney/Desktop/Soccer League App/sooccer-league-app/src/main/java/com/soccerapp/sooccerleagueapp/service/TeamsService.java
+/Users/lorcanfeeney/Desktop/Soccer League App/sooccer-league-app/src/main/java/com/soccerapp/sooccerleagueapp/dao/Competition.java
+/Users/lorcanfeeney/Desktop/Soccer League App/sooccer-league-app/src/main/java/com/soccerapp/sooccerleagueapp/controller/TeamController.java
+/Users/lorcanfeeney/Desktop/Soccer League App/sooccer-league-app/src/main/java/com/soccerapp/sooccerleagueapp/controller/CompetitionController.java
+/Users/lorcanfeeney/Desktop/Soccer League App/sooccer-league-app/src/main/java/com/soccerapp/sooccerleagueapp/service/CompetitionService.java
+/Users/lorcanfeeney/Desktop/Soccer League App/sooccer-league-app/src/main/java/com/soccerapp/sooccerleagueapp/repository/TeamsRepository.java
+/Users/lorcanfeeney/Desktop/Soccer League App/sooccer-league-app/src/main/java/com/soccerapp/sooccerleagueapp/configs/SecurityConfig.java
+/Users/lorcanfeeney/Desktop/Soccer League App/sooccer-league-app/src/main/java/com/soccerapp/sooccerleagueapp/repository/CompetitionRepository.java
+/Users/lorcanfeeney/Desktop/Soccer League App/sooccer-league-app/src/main/java/com/soccerapp/sooccerleagueapp/dto/CompetitionDTO.java
