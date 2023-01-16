@@ -1,5 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,8 +8,8 @@ import { TeamsService } from './Service/teams.service';
 import { LeagueTableComponent } from './league-table/league-table.component';
 @NgModule({
   declarations: [
-  
-    LeagueTableComponent
+    LeagueTableComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -17,6 +17,7 @@ import { LeagueTableComponent } from './league-table/league-table.component';
     HttpClientModule,
   ],
   providers: [TeamsService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }
