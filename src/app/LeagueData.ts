@@ -9,6 +9,11 @@ export interface LeagueData {
   matchesLoss: number;
   goalsFor: number;
   goalsAgainst: number;
-  points: number;
+  points: any;
+}
 
+export interface League {
+  id: number;
+  leagueName: string;
+  activeTeams: any[];
 }

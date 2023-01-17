@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Team } from './TeamModel';
 import { TeamsService } from './Service/teams.service';
 import { HttpErrorResponse } from '@angular/common/http';
-import {LeagueData} from "./LeagueData";
+import {League, LeagueData} from "./LeagueData";
 import {LeagueDataService} from "./Service/league-data.service";
 
 @Component({
@@ -13,11 +13,14 @@ import {LeagueDataService} from "./Service/league-data.service";
 
 export class AppComponent implements OnInit{
 
-  teams:LeagueData[] = [];
-  leagueData: LeagueData[] = [];
+  teams: LeagueData[];
+  leagues: League[];
 
-  constructor(private teamsService: TeamsService, private leagueDataService: LeagueDataService){}
 
+  constructor(private teamsService: TeamsService, private leagueDataService: LeagueDataService){
+    this.teams = [];
+    this.leagues = [];
+  }
 
   ngOnInit(): void {
     this.getInitData();
@@ -29,46 +32,14 @@ export class AppComponent implements OnInit{
 
   public getLeagueData(): void {
     this.leagueDataService.getLeagueData().subscribe(
-      (response: LeagueData[]) => {
-        response.forEach((e) => {
-          this.teams.push({
-            goalsAgainst: e.goalsAgainst,
-            goalsFor: e.goalsFor,
-            leagueId: e.leagueId,
-            matchesDraw: e.matchesDraw,
-            matchesLoss: e.matchesLoss,
-            matchesPlayed: e.matchesPlayed,
-            matchesWon: e.matchesWon,
-            teamId: e.teamId,
-            teamName: e.teamName,
-            id: e.id,
-            points: e.points,
-          })
-
-        })
+      (response: Array<any>) => {
+        this.teams = response.sort((a,b) => (a.points < b.points) ? 1 : -1);
       },
       (error: HttpErrorResponse) => {
               alert(error.message);
             }
           );
   }
-
-  // public dataSourceBuilder(data: any): Array<any> {
-  //   const leagueData = new Array<LeagueData>();
-  //   leagueData.forEach((e) => {
-  //     this.teams.push({
-  //       name: e.teamName,
-  //       played: e.matchesPlayed,
-  //       wins: e.matchesWon,
-  //       draws: e.matchesDraw,
-  //       losses: e.matchesLoss,
-  //       gf: e.goalsFor,
-  //       ga: e.goalsAgainst,
-  //       points: e.points
-  //     })
-  //   })
-  //   return(leagueData);
-  // }
 
 }
 
