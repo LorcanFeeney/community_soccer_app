@@ -9,11 +9,19 @@ import { LeagueTableComponent } from './league-table/league-table.component';
 import { LoginComponent } from './login/login.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
+import { SideNavComponent } from './side-nav/side-nav.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatButtonModule} from '@angular/material/button';
+import {MatRadioModule} from "@angular/material/radio";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+
 @NgModule({
   declarations: [
     LeagueTableComponent,
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +31,11 @@ import {RouterModule} from "@angular/router";
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
+    MatRadioModule,
+    BrowserAnimationsModule
   ],
   providers: [TeamsService],
   bootstrap: [AppComponent],

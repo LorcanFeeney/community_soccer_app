@@ -107,5 +107,8 @@
       }
     }
   },
-  "defaultProject": "soccer-league-ui"
+  "defaultProject": "soccer-league-ui",
+  "cli": {
+    "analytics": false
+  }
 }
