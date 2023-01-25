@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 import {AuthService} from "../Service/auth.service";
-import {AppRoutingModule} from "../app-routing.module";
 import {Router} from "@angular/router";
 
 @Component({
@@ -22,6 +21,7 @@ export class LoginComponent implements OnInit {
   });
 
   constructor(private authService: AuthService, private router: Router) { }
+
 
   ngOnInit(): void {
   }
@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
 
 
   onLogin() {
-    console.log('Lorcan');
+    this.authService.showNavBar();
     this.router.navigate(['/leagueTable']);
     // const loginData = this.loginForm.value;
     // this.authService.login(loginData.email, loginData.password)

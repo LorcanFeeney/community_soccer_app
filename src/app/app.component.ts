@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Team } from './TeamModel';
+import {Component, Input, OnInit} from '@angular/core';
 import { TeamsService } from './Service/teams.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import {League, LeagueData} from "./LeagueData";
 import {LeagueDataService} from "./Service/league-data.service";
+import {AuthService} from "./Service/auth.service";
 
 @Component({
   selector: 'app-root',
@@ -12,14 +12,23 @@ import {LeagueDataService} from "./Service/league-data.service";
 })
 
 export class AppComponent implements OnInit{
-
+  isLoggedIn = false;
+  @Input() links: Array<{ name: string; path: string; }> | undefined;
   teams: LeagueData[];
   leagues: League[];
 
+  constructor(private teamsService: TeamsService, private leagueDataService: LeagueDataService, private authService: AuthService){
+    this.authService.isLoggedIn.subscribe(loggedIn => {
+      this.isLoggedIn = loggedIn;
+    });
 
-  constructor(private teamsService: TeamsService, private leagueDataService: LeagueDataService){
     this.teams = [];
     this.leagues = [];
+    this.links = [
+      {name: 'League Tables', path: 'leagueTable'},
+      {name: 'Fixtures', path: 'fixtures'},
+      {name: 'Results', path: 'results'}
+    ];
   }
 
   ngOnInit(): void {

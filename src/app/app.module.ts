@@ -9,19 +9,25 @@ import { LeagueTableComponent } from './league-table/league-table.component';
 import { LoginComponent } from './login/login.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
-import { SideNavComponent } from './side-nav/side-nav.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatRadioModule} from "@angular/material/radio";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { BrowserAnimationsModule }  from "@angular/platform-browser/animations";
+import { NavbarComponent } from './navbar/navbar.component';
+import {MatIconModule} from "@angular/material/icon";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import { FixtureListComponent } from './fixture-list/fixture-list.component';
+import { ResultsListComponent } from './results-list/results-list.component';
 
 @NgModule({
   declarations: [
     LeagueTableComponent,
     AppComponent,
     LoginComponent,
-    SideNavComponent
+    NavbarComponent,
+    FixtureListComponent,
+    ResultsListComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     MatListModule,
     MatButtonModule,
     MatRadioModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
   ],
   providers: [TeamsService],
   bootstrap: [AppComponent],

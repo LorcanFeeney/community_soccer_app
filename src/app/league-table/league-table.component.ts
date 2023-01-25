@@ -3,6 +3,7 @@ import {HttpErrorResponse} from "@angular/common/http";
 import {League, LeagueData} from "../LeagueData";
 import {TeamsService} from "../Service/teams.service";
 import {LeagueDataService} from "../Service/league-data.service";
+import {AuthService} from "../Service/auth.service";
 
 @Component({
   selector: 'app-league-table',
@@ -13,7 +14,8 @@ export class LeagueTableComponent implements OnInit {
   @Input() teams: LeagueData[] = [];
   @Input() leagues: League[] = [];
 
-  constructor(private teamsService: TeamsService, private leagueDataService: LeagueDataService){
+  constructor(private teamsService: TeamsService, private leagueDataService: LeagueDataService, private authService: AuthService){
+    this.authService.showNavBar();
     this.teams = [];
     this.leagues = [
       {id: 1, leagueName: 'Premier League', activeTeams: []},
