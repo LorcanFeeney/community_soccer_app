@@ -1,0 +1,6 @@
+<div *ngFor="let fixture of fixtures">
+  <div *ngIf="fixture.date === today">
+    <p>{{ fixture.homeTeam }} vs {{ fixture.awayTeam }}</p>
+    <p>{{ fixture.date }}</p>
+  </div>
+</div>

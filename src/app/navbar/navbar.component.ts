@@ -17,7 +17,8 @@ export class NavbarComponent implements OnInit {
     this.links = [
       {name: 'League Tables', path: 'leagueTable'},
       {name: 'Fixtures', path: 'login'},
-      {name: 'Results', path: 'leagueTable'}
+      {name: 'Results', path: 'leagueTable'},
+      {name: 'Live Now', path: 'liveFixtures'}
     ];
   }
 

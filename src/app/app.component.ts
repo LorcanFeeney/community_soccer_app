@@ -27,7 +27,8 @@ export class AppComponent implements OnInit{
     this.links = [
       {name: 'League Tables', path: 'leagueTable'},
       {name: 'Fixtures', path: 'fixtures'},
-      {name: 'Results', path: 'results'}
+      {name: 'Results', path: 'results'},
+      {name: 'Live Fixtures', path: 'liveFixtures'}
     ];
   }
 

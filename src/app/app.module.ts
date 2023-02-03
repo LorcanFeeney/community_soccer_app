@@ -19,6 +19,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import { FixtureListComponent } from './fixture-list/fixture-list.component';
 import { ResultsListComponent } from './results-list/results-list.component';
+import { LiveFixturesComponent } from './live-fixtures/live-fixtures.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ResultsListComponent } from './results-list/results-list.component';
     LoginComponent,
     NavbarComponent,
     FixtureListComponent,
-    ResultsListComponent
+    ResultsListComponent,
+    LiveFixturesComponent
   ],
   imports: [
     BrowserModule,

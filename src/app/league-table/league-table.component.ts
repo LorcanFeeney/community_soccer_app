@@ -35,19 +35,13 @@ export class LeagueTableComponent implements OnInit {
     this.leagueDataService.getLeagueData().subscribe(
       (response: Array<any>) => {
         this.teams = response.sort((a,b) => (a.points < b.points) ? 1 : -1);
-        console.log('1');
-        console.log(this.teams);
-        console.log(this.leagues);
         this.teams.forEach(team => {
           this.leagues.forEach(league => {
             if (team.leagueId === league.id) {
               league.activeTeams.push(team);
-              console.log('2')
-              console.log(this.leagues);
             }
           });
         });
-        console.log('3')
       },
       (error: HttpErrorResponse) => {
         alert(error.message);
