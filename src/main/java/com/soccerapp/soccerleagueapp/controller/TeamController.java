@@ -20,7 +20,6 @@ public class TeamController {
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public List<Teams> getTeams(){
-        System.out.println("Lorcan");
         List<Teams> teams = this.teamsService.getAllTeams();
         return teams;
     }
